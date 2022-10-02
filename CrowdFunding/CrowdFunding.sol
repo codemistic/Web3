@@ -70,8 +70,8 @@ contract CrowdFunding{
         // making user payable because we have to transfer the collected money to that user
         address payable user = payable(msg.sender);
         // sending the total gathered money to the user 
-        user.transfer(contributors[msg.sender]);
         contributors[msg.sender] = 0;
+        user.transfer(contributors[msg.sender]);
     }
 
     // modifier so that it can be used in functions so that those functions can only be used by manager
