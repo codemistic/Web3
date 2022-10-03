@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    text-align: center;
+}
+
+/* contract header */
+
+.header li {
+    width: 1250px;
+    height: 30px;
+    background-color: rgb(235, 231, 231);
+}
+
+.header li+li {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid black;
+}
+
+p {
+    display: inline-block;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.header label {
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+}
+
+/* Uploading a file */
+
+.container-1 {
+    height: 420px;
+    margin: 25px;
+    padding: 12px;
+}
+
+.container-1 p {
+    margin: 0 0 10px 0;
+}
+
+.custom-file-upload {
+    text-align: center;
+    display: inline-block;
+    padding: 6px 8px;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+}
+
+/* .file-btn {
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+}
+
+.file-btn:hover {
+    cursor: pointer;
+}
+
+.file-name {
+    width: 400px;
+    display: inline-flex;
+    padding: 5px;
+    border-bottom: 2px solid rgb(0, 158, 158);
+} */
+
+
+hr {
+    position: absolute;
+    width: 455px;
+    left: 44px;
+    top: 314px;
+    border: 6px solid rgb(0, 158, 158);
+    margin: auto;
+    background-color: rgb(0, 158, 158);
+    border-radius: 5px;
+}
+
+#hash-btn {
+    display: block;
+    position: absolute;
+    top: 340px;
+    left: 393px;
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#hash-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Submitting a file */
+
+.submit {
+    position: relative;
+    right: 40px;
+    top: 80px;
+}
+
+.submit h4{
+    position: absolute;
+    margin: auto;
+    left: 145px;
+    top: 6px;
+}
+
+.submit li {
+    width: 450px;
+    height: 30px;
+    background-color: rgb(235, 231, 231);
+}
+
+.submit li+li {
+    background-color: rgb(255, 255, 255);
+}
+
+.submit li+li+li {
+    background-color: rgb(235, 231, 231);
+}
+
+.submit #hashText{
+    position: absolute;
+    top: 35px;
+    left: 145px;
+}
+
+.submit label {
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+}
+
+.submit-btn {
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Confirmation of Submitted File */
+
+.confirm {
+    position: relative;
+    right: 40px;
+    top: 80px;
+}
+
+.confirm li {
+    width: 450px;
+    height: 30px;
+    background-color: rgb(235, 231, 231);
+}
+
+.confirm li+li {
+    background-color: rgb(255, 255, 255);
+}
+
+.confirm li+li+li{
+    background-color: rgb(235, 231, 231);
+}
+
+.confirm li+li+li p{
+    position: absolute;
+    top: 66px;
+    left: 145px;
+}
+
+.confirm label {
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 111px;
+}
+
+/* Verifying the file */
+
+.container-2 {
+    position: relative;
+    width: 500px;
+    left: 800px;
+    bottom: 316px;
+}
+
+.verify-btn {
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+}
+
+.verify-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.verify {
+    position: relative;
+    right: 40px;
+    top: 20px;
+}
+
+.verify li {
+    width: 450px;
+    height: 30px;
+    background-color: rgb(235, 231, 231);
+}
+
+.verify label {
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    width: 150px;
+}
+
+#show {
+    color: white;
+    background-color: rgb(0, 158, 158);
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 20px;
+}

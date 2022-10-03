@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Varification Dapp</title>
+</head>
+
+<body>
+    <h1 class="heading">Product-Verification Dapp</h1>
+    <form class="header">
+        <ul>
+            <li>
+                <label>Contract Address</label>
+                <p>0x8cdaf0cd259887258bc13a92c0a6ada92698644cd</p>
+            </li>
+            <li>
+                <label>Coinbase Balance</label>
+                <p>100.00000 <strong>ETH</strong></p>
+            </li>
+        </ul>
+    </form>
+
+    <!-- Uploading a file -->
+
+    <div class="container-1">
+        <h2>Upload File</h2>
+        <p>Submit hash to blockchain or verify using an existing document.</p>
+
+        <form>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fas fa-cloud"></i> File
+            </label>
+            <input id="file-upload" name='upload_cont' type="file" style="display:none;" >
+            <label id="file-name"></label>
+        </form>
+
+        <!-- <button class="file-btn" onclick="document.getElementById('getFile').click()">File</button>
+            <input type="file" id="getFile" name="upload_cont_img" style="display: none">
+            <label class="file-name"></label> -->
+
+        <!-- Generating hash -->
+
+        <hr>
+        <button id="hash-btn" onclick="generateHash()">Generate Hash</button>
+
+        <!-- Submitting a file -->
+
+        <form class="submit">
+            <ul>
+                <li>
+                    <label>File</label>
+                    <h4></h4>
+                </li>
+                <li>
+                    <label>Hash</label>
+                    <p id="hashText"></p>
+                </li>
+                <li>
+                    <label>Option</label>
+                    <p><button type="submit" class="submit-btn">Submit</button></p>
+                </li>
+            </ul>
+        </form>
+
+        <!-- Confirmation of submitted file -->
+
+        <form class="confirm">
+            <ul>
+                <li>
+                    <label>File registered</label>
+                    <p>17/06/2022 4:09</p>
+                </li>
+                <li>
+                    <label>File Owner</label>
+                    <p>0x8cdaf0cd259887258bc13a92c0a6ada92698644cd</p>
+                </li>
+                <li>
+                   <p><strong>Please copy the hash for verification.</strong></p>
+                </li>
+            </ul>
+        </form>
+
+        <!-- Verifying the file -->
+        <div class="container-2">
+            <h2>Verify File</h2>
+            <div>
+                <button class="verify-btn">Verify</button>
+            </div>
+
+            <form class="verify">
+                <ul>
+                    <li>
+                        <label>Enter the Hash</label>
+                        <input type="text">
+                        <button type="submit" class="submit-btn" id="show">Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script src="crypto.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="web3.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
