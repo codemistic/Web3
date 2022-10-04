@@ -8,12 +8,12 @@ contract Coffee{
     mapping(address=>uint) public coffeeBalance;
     constructor(){
         owner=msg.sender;
-        coffeeBalance[address(this)]=100;
+        coffeeBalance[address(this)]=100; 
     }
 
 
     function Coffee_Balance() public view returns(uint){
-        return coffeeBalance[address(this)];
+        return coffeeBalance[address(this)]; //This will return coffee balance//
     }
 
     function Purchase_Coffee(uint amount) public payable {
@@ -27,7 +27,7 @@ contract Coffee{
 
     function Restock_Coffee(uint amount) public{
         require(msg.sender==owner, "Only owner can restock the coffee machine");
-        coffeeBalance[address(this)]=coffeeBalance[address(this)]+amount;
+        coffeeBalance[address(this)]=coffeeBalance[address(this)]+amount; //This will restock the coffee machine//
         
     }
 
