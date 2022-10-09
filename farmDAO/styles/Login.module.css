@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #eee;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrapper > button {
+  cursor: pointer;
+  color: #eee;
+  background-color: #54585f;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.button:hover {
+  background-color: #6c757d8e;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #eee;
+  box-shadow: 8px 10px 5px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 8px 10px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 10px 5px 0px rgba(0, 0, 0, 1);
+}
