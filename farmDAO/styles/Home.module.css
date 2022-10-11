@@ -1,0 +1,86 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #e9f4f1;
+}
+
+.content {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  gap: 10rem;
+  margin: 0 auto;
+}
+
+.createProposalForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 1rem 2rem;
+  font-size: 1.5rem;
+  position: fixed;
+  left: 10vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .createProposalForm {
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+  }
+  .proposals {
+    /* margin-right: 10rem; */
+    margin-top: 210px;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+  .wrapper {
+    width: 100vw;
+  }
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.formInput {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #2d2d2d;
+  background-color: transparent;
+  color: #eee;
+}
+
+.formButton {
+  background-color: #2d2d2d;
+  color: #eee;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.formButton:hover {
+  border: 1px solid #eee;
+  color: #eee;
+  transition: all 0.6s ease-in-out;
+}
+.proposals {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+  gap: 1rem;
+  padding: 1rem 4rem;
+
+  border-radius: 1rem;
+}

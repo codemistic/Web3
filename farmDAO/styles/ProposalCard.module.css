@@ -1,0 +1,91 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.4rem;
+  margin: auto;
+  font-family: arial;
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  min-width: 30rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.proposer {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #eee;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #607c8e;
+}
+
+.voteButton {
+  color: #eee;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #211f24;
+  border: 1px solid #2d2d2d;
+}
+
+.voteButton:hover {
+  border: 1px solid #eee;
+  transition: all 0.2s ease-in-out;
+}
+
+.status {
+  font-size: 0.9rem;
+  color: #eee;
+  display: flex;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  align-items: center;
+  max-height: 30px;
+  font-weight: bold;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.results {
+  font-size: 1rem;
+  color: #607c8e;
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.executeButton {
+  color: #eee;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #211f24;
+  border: 1px solid #fa0505;
+  align-items: center;
+  justify-content: center;
+}
