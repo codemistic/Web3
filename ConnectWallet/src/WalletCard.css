@@ -1,0 +1,45 @@
+body{
+    background-image: url('./uni.png');
+}
+
+.walletCard {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.header {
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+h2{
+    color: rgb(57, 220, 160);
+}
+
+.balance {
+    color: rgb(156, 83, 224);
+}
+
+.accountDisplay {
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 10px;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn {
+    background-color: rgb(232, 240, 226);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(156, 238, 98);
+    transition: 0.6s;
+    cursor: pointer;
+}
