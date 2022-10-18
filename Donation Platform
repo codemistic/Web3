@@ -1,0 +1,76 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+
+contract Donations is Ownable{
+using Counters for Counters.Counter;
+   
+struct request{
+    uint256 id;
+    string detail; //why donation is needed
+    uint256 time;
+    address  payable sender;
+    uint status;
+}
+//request made by user
+
+mapping(uint=>request) public idtorequest;
+mapping(uint=>uint) public idtofund; //stores fund corresponding to request id
+uint256 [] private requestids;
+mapping(address=>uint256 []) public usertoreq;
+Counters.Counter private _reqIds;
+
+
+function createRequest(string memory requestdata) public
+{
+      _reqIds.increment();
+      uint id=_reqIds.current();
+      request memory req=request(id,requestdata,block.timestamp,payable(msg.sender),0);
+      idtorequest[id]=req;
+      requestids.push(id);
+}
+//user of platform will create a request for donation
+
+function acceptrequest(uint256 id) public  onlyOwner() {
+require(idtorequest[id].id!=0);
+idtorequest[id].status=1;
+usertoreq[idtorequest[id].sender].push(id);
+idtorequest[id].time=block.timestamp;
+}
+//admin will accept the valid requests made by users
+
+function donateeth(uint256 id) public payable{
+    require(idtorequest[id].id!=0);
+    require(idtorequest[id].status==1);
+    idtofund[id]+=msg.value;
+}
+//anyone can donate eth/wie in accepted requests
+
+modifier onlybyrequester(uint256 id,address requester)
+{
+    require(idtorequest[id].sender==requester);
+    _;
+}
+
+modifier validamount(uint256 id,uint256 amount)
+{
+    require(idtofund[id]>=amount);
+    _;
+}
+
+function withdraweth(uint256 id,uint256 amount) public onlybyrequester(id,msg.sender) validamount(id,amount){
+    idtofund[id]-=amount;
+    (idtorequest[id].sender).transfer(amount);
+}
+//creater of request can withdraw money
+
+function getrequestids() external view returns (uint256  [] memory){
+    return requestids;
+}
+//returns array of request ids
+function getuserreq(address account)  external view returns (uint256  [] memory){
+    return usertoreq[account];
+}
+//returns request made by a user corresponds to his/her address on blockchain
+}
