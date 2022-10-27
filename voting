@@ -47,7 +47,7 @@ else if(block.timestamp>=creatingTime+startDelay*1 minutes+duration*1 minutes)
  stage=Stages.closed;
 }
 }
-//update stages 
+//update stagesss 
 
 
 modifier onlyByAdmin(address user)
